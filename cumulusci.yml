@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: Loyalty-Gamification-Setup
+    package:
+        name: Loyalty-Gamification-Setup
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Loyalty-Gamification-Setup/tests
+            options:
+                outputdir: robot/Loyalty-Gamification-Setup/results
+
+    robot_testdoc:
+        options:
+            path: robot/Loyalty-Gamification-Setup/tests
+            output: robot/Loyalty-Gamification-Setup/doc/Loyalty-Gamification-Setup_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
