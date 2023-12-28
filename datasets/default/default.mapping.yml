@@ -132,23 +132,7 @@ Insert Contact:
       table: Contact
       key_field: ReportsToId
       after: Insert Contact
-Insert GameReward:
-  sf_object: GameReward
-  table: GameReward
-  fields:
-  - Color
-  - CurrentRewardCount
-  - Description
-  - ImageUrl
-  - MaximumRewardCount
-  - Name
-  - RewardType
-  - RewardValue
-  - WinProbability
-  lookups:
-    GameDefinitionId:
-      table: GameDefinition
-      key_field: GameDefinitionId
+
 Insert VoucherDefinition:
   sf_object: VoucherDefinition
   table: VoucherDefinition
@@ -277,3 +261,20 @@ Insert LoyaltyTier:
     LoyaltyTierGroupId:
       table: LoyaltyTierGroup
       key_field: LoyaltyTierGroupId
+Insert GameReward:
+  sf_object: GameReward
+  table: GameReward
+  fields:
+  - Color
+  - CurrentRewardCount
+  - Description
+  - ImageUrl
+  - MaximumRewardCount
+  - Name
+  - RewardType
+  - RewardValue
+  - WinProbability
+  lookups:
+    GameDefinitionId:
+      table: GameDefinition
+      key_field: GameDefinitionId
