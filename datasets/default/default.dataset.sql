@@ -168,10 +168,9 @@ CREATE TABLE "LoyaltyTierGroup" (
 	"TierPeriodQuantity" VARCHAR(255), 
 	"TierPeriodUnit" VARCHAR(255), 
 	"LoyaltyProgramId" VARCHAR(255), 
-	"TierAssessmentCurrencyId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "LoyaltyTierGroup" VALUES(1,'','None','True','False','True','NTO Tier Group','2023-12-31','1','Years','Fixed','1','Years','1','');
+INSERT INTO "LoyaltyTierGroup" VALUES(1,'','None','True','False','True','NTO Tier Group','2023-12-31','1','Years','Fixed','1','Years','1');
 CREATE TABLE "LoyaltyTier" (
 	id INTEGER NOT NULL, 
 	"Description" VARCHAR(255), 
