@@ -123,24 +123,7 @@ CREATE TABLE "LoyaltyProgram" (
 	PRIMARY KEY (id)
 );
 INSERT INTO "LoyaltyProgram" VALUES(1,'','','True','NTO Insider','Active','LOYALTY_PROGRAM');
-CREATE TABLE "LoyaltyProgramCurrency" (
-	id INTEGER NOT NULL, 
-	"IsActive" VARCHAR(255), 
-	"CostperUnit" VARCHAR(255), 
-	"Name" VARCHAR(255), 
-	"CurrencyType" VARCHAR(255), 
-	"ExpiryPeriodFrequency" VARCHAR(255), 
-	"ExpiryPeriodUnit" VARCHAR(255), 
-	"ExpiryModel" VARCHAR(255), 
-	"ExtendExpiration" VARCHAR(255), 
-	"HasEscrow" VARCHAR(255), 
-	"IsPrimary" VARCHAR(255), 
-	"LoyaltyProgramId" VARCHAR(255), 
-	"LoyaltyTierGroupId" VARCHAR(255), 
-	PRIMARY KEY (id)
-);
-INSERT INTO "LoyaltyProgramCurrency" VALUES(1,'True','','Tier Points','Qualifying','','','','','False','True','1','1');
-INSERT INTO "LoyaltyProgramCurrency" VALUES(2,'True','','Points','NonQualifying','12','Months','Fixed','TillEndOfMonth','False','False','1','');
+
 CREATE TABLE "LoyaltyProgramMember" (
 	id INTEGER NOT NULL, 
 	"CanReceivePartnerPromotions" VARCHAR(255), 
@@ -169,19 +152,7 @@ CREATE TABLE "LoyaltyProgramMember" (
 );
 INSERT INTO "LoyaltyProgramMember" VALUES(1,'False','False','POS','2023-12-12','','False','','Active','Individual','','','10000','OX9QWXIE','Monthly','','Mail','','6','','1','','');
 INSERT INTO "LoyaltyProgramMember" VALUES(2,'False','False','POS','2023-12-26','','False','','Active','Individual','','','100001','3EHPNU8U','Monthly','','Mail','','2','','1','','');
-CREATE TABLE "LoyaltyTier" (
-	id INTEGER NOT NULL, 
-	"Description" VARCHAR(255), 
-	"MaximumEligibleBalance" VARCHAR(255), 
-	"MinimumEligibleBalance" VARCHAR(255), 
-	"Name" VARCHAR(255), 
-	"SequenceNumber" VARCHAR(255), 
-	"LoyaltyTierGroupId" VARCHAR(255), 
-	PRIMARY KEY (id)
-);
-INSERT INTO "LoyaltyTier" VALUES(1,'','','','Silver','10','1');
-INSERT INTO "LoyaltyTier" VALUES(2,'','','','Gold','20','1');
-INSERT INTO "LoyaltyTier" VALUES(3,'','','','Platinum','30','1');
+
 CREATE TABLE "LoyaltyTierGroup" (
 	id INTEGER NOT NULL, 
 	"Description" VARCHAR(255), 
@@ -201,6 +172,37 @@ CREATE TABLE "LoyaltyTierGroup" (
 	PRIMARY KEY (id)
 );
 INSERT INTO "LoyaltyTierGroup" VALUES(1,'','None','True','False','True','NTO Tier Group','2023-12-31','1','Years','Fixed','1','Years','1','');
+CREATE TABLE "LoyaltyTier" (
+	id INTEGER NOT NULL, 
+	"Description" VARCHAR(255), 
+	"MaximumEligibleBalance" VARCHAR(255), 
+	"MinimumEligibleBalance" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	"SequenceNumber" VARCHAR(255), 
+	"LoyaltyTierGroupId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "LoyaltyTier" VALUES(1,'','','','Silver','10','1');
+INSERT INTO "LoyaltyTier" VALUES(2,'','','','Gold','20','1');
+INSERT INTO "LoyaltyTier" VALUES(3,'','','','Platinum','30','1');
+CREATE TABLE "LoyaltyProgramCurrency" (
+	id INTEGER NOT NULL, 
+	"IsActive" VARCHAR(255), 
+	"CostperUnit" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	"CurrencyType" VARCHAR(255), 
+	"ExpiryPeriodFrequency" VARCHAR(255), 
+	"ExpiryPeriodUnit" VARCHAR(255), 
+	"ExpiryModel" VARCHAR(255), 
+	"ExtendExpiration" VARCHAR(255), 
+	"HasEscrow" VARCHAR(255), 
+	"IsPrimary" VARCHAR(255), 
+	"LoyaltyProgramId" VARCHAR(255), 
+	"LoyaltyTierGroupId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "LoyaltyProgramCurrency" VALUES(1,'True','','Tier Points','Qualifying','','','','','False','True','1','1');
+INSERT INTO "LoyaltyProgramCurrency" VALUES(2,'True','','Points','NonQualifying','12','Months','Fixed','TillEndOfMonth','False','False','1','');
 CREATE TABLE "VoucherDefinition" (
 	id INTEGER NOT NULL, 
 	"IsActive" VARCHAR(255), 
