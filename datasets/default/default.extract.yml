@@ -96,19 +96,6 @@ extract:
     - StartDate
     - Status
     - TimeoutDuration
-  GameReward:
-    fields:
-    - Color
-    - CurrentRewardCount
-    - Description
-    - GameDefinitionId
-    - ImageUrl
-    - MaximumRewardCount
-    - Name
-    - RewardDefinitionId
-    - RewardType
-    - RewardValue
-    - WinProbability
   LoyaltyProgramMember:
     fields:
     - CanReceivePartnerPromotions

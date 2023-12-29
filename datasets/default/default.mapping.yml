@@ -258,21 +258,3 @@ Insert LoyaltyProgramCurrency:
     LoyaltyTierGroupId:
       table: LoyaltyTierGroup
       key_field: LoyaltyTierGroupId
-      after: Insert LoyaltyTierGroup
-Insert GameReward:
-  sf_object: GameReward
-  table: GameReward
-  fields:
-  - Color
-  - CurrentRewardCount
-  - Description
-  - ImageUrl
-  - MaximumRewardCount
-  - Name
-  - RewardType
-  - RewardValue
-  - WinProbability
-  lookups:
-    GameDefinitionId:
-      table: GameDefinition
-      key_field: GameDefinitionId
