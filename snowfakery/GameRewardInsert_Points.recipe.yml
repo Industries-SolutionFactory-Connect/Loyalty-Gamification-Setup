@@ -1,0 +1,25 @@
+- snowfakery_version: 3
+- plugin: snowfakery.standard_plugins.Salesforce.SalesforceQuery  
+- plugin: snowfakery.standard_plugins.datasets.Dataset
+
+- object:  GameReward
+  count: 3
+  fields:
+    __game_data:
+      Dataset.iterate:
+        dataset: ./GameReward_Points.csv
+    Color: ${{__game_data.Color}}
+    Description: ${{__game_data.Description}}
+    MaximumRewardCount: ${{__game_data.MaximumRewardCount}}
+    RewardType: ${{__game_data.RewardType}}
+    Name: ${{__game_data.Name}}
+    RewardValue: ${{__game_data.RewardValue}}
+    WinProbability: ${{__game_data.WinProbability}}
+    GameDefinitionId: 
+      SalesforceQuery.find_record:
+          from: GameDefinition
+          where: Name = '${{__game_data.GameDefinitionName}}'
+    RewardDefinitionId: 
+      SalesforceQuery.find_record:
+          from: LoyaltyProgramCurrency
+          where: Name = '${{__game_data.RewardDefinitionName}}'

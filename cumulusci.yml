@@ -26,3 +26,30 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+flows:
+    gamification_data_setup:
+        steps:
+            1:
+                task: load_sample_data
+                options:
+                    dataset: default
+                ui_options:
+                    name: Load data related to Loyalty program and all gamification entities except GameRewards
+            2:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/GameRewardInsert_NoRewards.recipe.yml
+                ui_options:
+                    name: Load Game Reward records of "RewardType = NoReward"
+            3:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/GameRewardInsert_Points.recipe.yml
+                ui_options:
+                    name: Load Game Reward records of "RewardType = Points"
+            4:
+                task: generate_and_load_from_yaml
+                options:
+                    generator_yaml: snowfakery/GameRewardInsert_Vouchers.recipe.yml
+                ui_options:
+                    name: Load Game Reward records of "RewardType = Vouchers"

@@ -226,27 +226,6 @@ CREATE TABLE "VoucherDefinition" (
 	PRIMARY KEY (id)
 );
 INSERT INTO "VoucherDefinition" VALUES(1,'True','9','V','10-OFF','','enjoy 10% off on all products online or at our stores','10','2023-12-01','','10','Days','Period','','','10% Off on All Products','False','DiscountPercentage','1','');
-CREATE TABLE "GameReward" (
-	id INTEGER NOT NULL, 
-	"Color" VARCHAR(255), 
-	"CurrentRewardCount" VARCHAR(255), 
-	"Description" VARCHAR(255), 
-	"ImageUrl" VARCHAR(255), 
-	"MaximumRewardCount" VARCHAR(255), 
-	"Name" VARCHAR(255), 
-	"RewardType" VARCHAR(255), 
-	"RewardValue" VARCHAR(255), 
-	"WinProbability" VARCHAR(255), 
-	"GameDefinitionId" VARCHAR(255), 
-	PRIMARY KEY (id)
-);
-INSERT INTO "GameReward" VALUES(1,'','1','','','100','100 Points Won','LoyaltyPoints','100.0','5.0','1');
-INSERT INTO "GameReward" VALUES(2,'','0','','','10','10% Off','Voucher','','10.0','1');
-INSERT INTO "GameReward" VALUES(3,'','','','','','No Reward','NoReward','','70.0','1');
-INSERT INTO "GameReward" VALUES(4,'F9370E','0','','','100','10 Percent off on Shopping','Voucher','','5.0','2');
-INSERT INTO "GameReward" VALUES(5,'659954','0','','','100','200 Points','LoyaltyPoints','200.0','5.0','2');
-INSERT INTO "GameReward" VALUES(6,'323CD6','0','','','100','No Reward','NoReward','500.0','80.0','2');
-INSERT INTO "GameReward" VALUES(7,'F1EE18','0','','','100','500 Points','LoyaltyPoints','500.0','5.0','2');
 CREATE TABLE "Individual" (
 	id INTEGER NOT NULL, 
 	"LastName" VARCHAR(255), 
