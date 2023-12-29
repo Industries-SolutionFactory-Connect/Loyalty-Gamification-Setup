@@ -1,0 +1,3 @@
+Color,Description,MaximumRewardCount,Name,RewardType,RewardValue,WinProbability,GameDefinitionName
+,,,No Reward,NoReward,,70,Scratchcard Game
+323CD6,,100,No Reward,NoReward,500,80,Spin the Wheel Game

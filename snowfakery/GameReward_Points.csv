@@ -1,0 +1,4 @@
+Color,Description,MaximumRewardCount,Name,RewardType,RewardValue,WinProbability,GameDefinitionName,RewardDefinitionName
+,,100,100 Points Won,LoyaltyPoints,100,5,Scratchcard Game,Points
+659954,,100,200 Points,LoyaltyPoints,200,5,Spin the Wheel Game,Points
+F1EE18,,100,500 Points,LoyaltyPoints,500,5,Spin the Wheel Game,Points
