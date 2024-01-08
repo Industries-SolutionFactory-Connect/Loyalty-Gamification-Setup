@@ -54,7 +54,7 @@ flows:
                 ui_options:
                     name: Load Game Reward records of "RewardType = Vouchers"
 
-Plans:
+plans:
   install:
     slug: install
     tier: primary
