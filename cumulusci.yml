@@ -64,10 +64,10 @@ plans:
         post_install_message: "Thanks for installing data for Loyalty Gamification Setup Module. "
         error_message: "To get help with this error, go to [help.salesforce.com](https://help.salesforce.com/), find the Support & Services area and log a technical support ticket with Salesforce. Include “PMM” in the subject line and include in your comment the installation link shown here."
         checks:
-          - when: "'LoyaltyManagementPsl' not in tasks.get_available_permission_set_licenses()"
+          - when: "'LoyaltyManagementPsl' not in tasks.get_assigned_permission_sets()"
             action: error
             message: "You need LoyaltyManagementPsl licence in your Org to use this feature. Contact your Administrator."
-          - when: "'LoyaltyAdmin' not in tasks.get_available_permission_set_licenses()"
+          - when: "'LoyaltyAdmin' not in tasks.get_assigned_permission_sets()"
             action: error
             message: "You need LoyaltyAdmin PSL to use this feature. Contact your Administrator."
         steps:
